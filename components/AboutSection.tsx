@@ -27,7 +27,7 @@ export default function AboutSection() {
 
                         <div className={styles.bioText}>
                             <p>
-                                With over [X] years of experience in Miami's real estate market,
+                                With 9 years of experience in Miami's real estate market,
                                 I bring a personal touch to every transaction. My mission is simple:
                                 to make your home buying or selling journey as smooth and enjoyable
                                 as possible.
@@ -36,7 +36,7 @@ export default function AboutSection() {
                                 I believe that finding a home isn't just about square footage and
                                 amenities—it's about discovering the place where your life's best
                                 moments will unfold. That's why I take the time to truly understand
-                                your needs, dreams, and aspirations.
+                                your needs and aspirations.
                             </p>
                             <p>
                                 Whether you're a first-time buyer, growing family, or looking to
