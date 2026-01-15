@@ -9,7 +9,7 @@ export default function AboutSection() {
                     <div className={styles.imageContainer}>
                         <div className={styles.imageWrapper}>
                             <img
-                                src="/gaby-photo.jpg"
+                                src="/gabyphoto.jpg"
                                 alt="Gaby - Real Estate Agent"
                                 className={styles.aboutImage}
                             />
