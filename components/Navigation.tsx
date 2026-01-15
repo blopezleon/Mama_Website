@@ -28,7 +28,7 @@ export default function Navigation() {
                         About Me
                     </Link>
                     <a
-                        href="tel:+1234567890"
+                        href="tel:+7866172256"
                         className={`${styles.navLink} ${styles.navContact}`}
                     >
                         Contact

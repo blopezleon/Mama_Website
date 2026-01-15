@@ -195,7 +195,7 @@ export default function PropertyCard({ property }: PropertyCardProps) {
 
                     <div className={styles.actions}>
                         <a
-                            href="tel:+1234567890"
+                            href="tel:+7866172256"
                             className={styles.contactButton}
                             onClick={(e) => e.stopPropagation()}
                         >
