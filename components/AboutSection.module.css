@@ -1,0 +1,212 @@
+.aboutSection {
+    padding: var(--space-24) 0;
+    background: linear-gradient(to bottom,
+            var(--color-cream) 0%,
+            var(--color-warm-white) 50%,
+            var(--color-cream) 100%);
+}
+
+.aboutGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+}
+
+/* Image Side */
+.imageContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+}
+
+.aboutImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    z-index: 2;
+}
+
+.imageAccent {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: var(--color-sage);
+    opacity: 0.15;
+    border-radius: var(--radius-xl);
+    z-index: 1;
+}
+
+/* Content Side */
+.contentContainer {
+    padding: var(--space-8);
+}
+
+.eyebrow {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-sage-dark);
+    margin-bottom: var(--space-3);
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: var(--text-5xl);
+    font-weight: 600;
+    color: var(--color-warm-charcoal);
+    margin-bottom: var(--space-2);
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: var(--text-xl);
+    color: var(--color-charcoal-medium);
+    margin-bottom: var(--space-8);
+    font-weight: 400;
+}
+
+.bioText {
+    margin-bottom: var(--space-8);
+}
+
+.bioText p {
+    font-size: var(--text-base);
+    line-height: 1.8;
+    color: var(--color-charcoal-medium);
+    margin-bottom: var(--space-6);
+}
+
+.bioText p:last-child {
+    margin-bottom: 0;
+}
+
+/* Credentials */
+.credentials {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+    padding: var(--space-6);
+    background-color: var(--color-off-white);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--color-sage);
+}
+
+.credentialItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.credentialIcon {
+    font-size: var(--text-2xl);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-cream);
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+}
+
+.credentialTitle {
+    font-weight: 600;
+    font-size: var(--text-base);
+    color: var(--color-warm-charcoal);
+    margin-bottom: var(--space-1);
+}
+
+.credentialDesc {
+    font-size: var(--text-sm);
+    color: var(--color-charcoal-medium);
+}
+
+/* CTA Buttons */
+.ctaButtons {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .aboutGrid {
+        gap: var(--space-12);
+    }
+
+    .title {
+        font-size: var(--text-4xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutSection {
+        padding: var(--space-16) 0;
+    }
+
+    .aboutGrid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .imageWrapper {
+        max-width: 100%;
+    }
+
+    .contentContainer {
+        padding: 0;
+    }
+
+    .title {
+        font-size: var(--text-3xl);
+    }
+
+    .subtitle {
+        font-size: var(--text-lg);
+    }
+
+    .credentials {
+        padding: var(--space-4);
+    }
+
+    .ctaButtons {
+        flex-direction: column;
+    }
+
+    .ctaButtons a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Hover Effects */
+.aboutImage {
+    transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+}
+
+.imageWrapper:hover .aboutImage {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
+
+.imageWrapper:hover .imageAccent {
+    opacity: 0.2;
+    transition: opacity var(--transition-slow);
+}

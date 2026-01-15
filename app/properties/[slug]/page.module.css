@@ -1,0 +1,223 @@
+.propertyPage {
+    min-height: 100vh;
+    padding: var(--space-8) 0 var(--space-16) 0;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-sage-dark);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    margin-bottom: var(--space-8);
+    transition: color var(--transition-base);
+}
+
+.backLink:hover {
+    color: var(--color-terracotta);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: var(--text-4xl);
+    font-weight: 600;
+    color: var(--color-warm-charcoal);
+    margin-bottom: var(--space-2);
+}
+
+.address {
+    font-size: var(--text-lg);
+    color: var(--color-charcoal-medium);
+}
+
+.gallery {
+    margin-bottom: var(--space-12);
+}
+
+.mainImage {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: var(--space-4);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+}
+
+.thumbnail {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform var(--transition-base);
+}
+
+.thumbnail:hover {
+    transform: scale(1.02);
+}
+
+.content {
+    max-width: 900px;
+}
+
+.details {
+    background-color: var(--color-off-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    margin-bottom: var(--space-8);
+}
+
+.priceSection {
+    padding-bottom: var(--space-6);
+    border-bottom: 1px solid var(--color-warm-white);
+    margin-bottom: var(--space-6);
+}
+
+.price {
+    font-family: var(--font-serif);
+    font-size: var(--text-4xl);
+    font-weight: 600;
+    color: var(--color-warm-charcoal);
+    margin: 0;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.stat {
+    text-align: center;
+    padding: var(--space-4);
+    background-color: var(--color-warm-white);
+    border-radius: var(--radius-md);
+}
+
+.statValue {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    color: var(--color-sage-dark);
+    margin-bottom: var(--space-1);
+}
+
+.statLabel {
+    display: block;
+    font-size: var(--text-sm);
+    color: var(--color-charcoal-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.section {
+    margin-bottom: var(--space-8);
+}
+
+.sectionTitle {
+    font-family: var(--font-serif);
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    color: var(--color-warm-charcoal);
+    margin-bottom: var(--space-4);
+}
+
+.description {
+    font-size: var(--text-lg);
+    line-height: 1.7;
+    color: var(--color-charcoal-medium);
+}
+
+/* Agent's Note - Special Styling */
+.agentNote {
+    background: linear-gradient(135deg, #F9F8F6 0%, #FAF9F7 100%);
+    border-left: 4px solid var(--color-terracotta);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+    margin-top: var(--space-8);
+}
+
+.agentNoteHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.heartIcon {
+    width: 24px;
+    height: 24px;
+    color: var(--color-terracotta);
+    flex-shrink: 0;
+}
+
+.agentNoteTitle {
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--color-warm-charcoal);
+    margin: 0;
+}
+
+.agentNoteText {
+    font-size: var(--text-lg);
+    line-height: 1.7;
+    color: var(--color-charcoal-medium);
+    font-style: italic;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: var(--text-3xl);
+    }
+
+    .thumbnails {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .details {
+        padding: var(--space-6);
+    }
+
+    .price {
+        font-size: var(--text-3xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: var(--text-2xl);
+    }
+
+    .thumbnails {
+        grid-template-columns: 1fr;
+    }
+}

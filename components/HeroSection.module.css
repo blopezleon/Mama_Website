@@ -1,0 +1,137 @@
+/* Compact Header - Bringing Marketplace to the Top */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg,
+            var(--color-warm-white) 0%,
+            var(--color-warm-charcoal) 100%);
+    border-bottom: 1px solid rgba(139, 154, 143, 0.1);
+    margin-bottom: var(--space-8);
+}
+
+.heroContent {
+    position: relative;
+    width: 100%;
+    max-width: var(--max-width-content);
+    padding: 0 var(--space-6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-8);
+}
+
+.textContent {
+    flex: 1;
+}
+
+.heroTitle {
+    font-family: var(--font-serif);
+    font-size: var(--text-3xl);
+    font-weight: 600;
+    color: var(--color-warm-charcoal);
+    margin-bottom: var(--space-2);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+
+.heroSubtitle {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    font-weight: 400;
+    color: var(--color-charcoal-medium);
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+
+/* Decorative Element */
+.decorativeElement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.accent {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--shadow-md);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.15;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.25;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 140px;
+        margin-bottom: var(--space-6);
+    }
+
+    .heroContent {
+        gap: var(--space-4);
+    }
+
+    .heroTitle {
+        font-size: var(--text-2xl);
+    }
+
+    .heroSubtitle {
+        font-size: var(--text-sm);
+    }
+
+    .decorativeElement {
+        width: 80px;
+        height: 80px;
+    }
+
+    .accent {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 120px;
+    }
+
+    .heroContent {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-3);
+        padding: var(--space-4) var(--space-6);
+    }
+
+    .heroTitle {
+        font-size: var(--text-xl);
+        margin-bottom: var(--space-1);
+    }
+
+    .heroSubtitle {
+        font-size: var(--text-xs);
+    }
+
+    .decorativeElement {
+        display: none;
+    }
+}
