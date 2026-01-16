@@ -9,12 +9,13 @@ export interface Property {
     neighborhood?: string;
     price: number;
     bedrooms: number;
-    bathrooms: number;
-    squareFeet: number;
+    bathrooms: number | string;
+    squareFeet: number | string;
     description?: string;
     agentNote?: string;
     status: "for-sale" | "for-rent";
     yearBuilt?: number;
     lotSize?: number;
     displayOnHomepage?: boolean;
+    sortOrder?: number;
 }

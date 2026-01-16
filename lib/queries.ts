@@ -2,7 +2,7 @@ import { groq } from "next-sanity";
 
 // Get all active properties for homepage
 export const propertiesQuery = groq`
-  *[_type == "property" && displayOnHomepage == true] | order(_createdAt desc) {
+  *[_type == "property" && displayOnHomepage == true] | order(sortOrder asc, _createdAt desc) {
     _id,
     title,
     slug,
@@ -17,7 +17,8 @@ export const propertiesQuery = groq`
     agentNote,
     status,
     yearBuilt,
-    lotSize
+    lotSize,
+    sortOrder
   }
 `;
 

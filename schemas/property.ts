@@ -58,14 +58,16 @@ export const property = defineType({
         {
             name: "bathrooms",
             title: "Bathrooms",
-            type: "number",
-            validation: (Rule) => Rule.required().min(0),
+            type: "string",
+            description: "e.g., 2, 2.5, or 2-3",
+            validation: (Rule) => Rule.required(),
         },
         {
             name: "squareFeet",
             title: "Square Feet",
-            type: "number",
-            validation: (Rule) => Rule.required().positive(),
+            type: "string",
+            description: "e.g., 1500 or 1000-1200",
+            validation: (Rule) => Rule.required(),
         },
         {
             name: "description",
@@ -100,6 +102,13 @@ export const property = defineType({
             type: "boolean",
             description: "Toggle to show/hide this property on the main page",
             initialValue: true,
+        },
+        {
+            name: "sortOrder",
+            title: "Sort Order",
+            type: "number",
+            description: "Lower numbers appear first on homepage (optional)",
+            hidden: ({ document }) => !document?.displayOnHomepage,
         },
         {
             name: "yearBuilt",
