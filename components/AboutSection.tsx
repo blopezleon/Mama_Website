@@ -72,7 +72,7 @@ export default function AboutSection() {
 
                         {/* Contact CTA */}
                         <div className={styles.ctaButtons}>
-                            <a href="tel:+7866172256" className="btn btn-primary">
+                            <a href="tel:+17866172256" className="btn btn-primary">
                                 📞 Get In Touch
                             </a>
                             <a href="mailto:gaby@realestate.com" className="btn btn-secondary">
